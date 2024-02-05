@@ -1,25 +1,43 @@
 // test.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-#include "SFML/Graphics.hpp"
+#include "SFML\Graphics.hpp"
+#include "SFML\Window.hpp"
+#include "SFML\System.hpp"
 #include <iostream>
+
+using namespace sf;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    RenderWindow window(VideoMode(640, 480), "SFML works!");
+
+    CircleShape hoop;
+    hoop.setRadius(50.f);
+    hoop.setFillColor(Color::Blue);
+    hoop.setOutlineThickness(2);
+    hoop.setOutlineColor(Color::Yellow);
+
+
+    CircleShape ball;
 
     while (window.isOpen())
     {
-        sf::Event event;
+        Event event;
         while (window.pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
                 window.close();
         }
 
-        window.clear();
-        window.draw(shape);
+
+        //Update
+        window.clear(Color::White);
+        
+
+
+
+        //Draw
+        window.draw(hoop);
         window.display();
     }
 

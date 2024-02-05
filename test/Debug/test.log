@@ -1,2 +1,3 @@
-﻿  test.cpp
-  test.vcxproj -> C:\Users\eric.whye\Documents\Projects\test\Debug\test.exe
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (test.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+  test.vcxproj -> C:\Users\Eric\Desktop\project\2D_Physics_Engine\Debug\2D_Physics_Engine.exe

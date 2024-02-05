@@ -26,7 +26,7 @@ Vector Vector::normalized() {
     return Vector(x * normLength, y * normLength);
 }
 
-Vector Vector::normalize() {
+void Vector::normalize() {
     double normLength = 1 / length();
     x *= normLength;
     y *= normLength;

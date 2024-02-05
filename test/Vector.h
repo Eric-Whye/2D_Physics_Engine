@@ -9,7 +9,7 @@ public:
     double length();
     double sqrLength();
     Vector normalized();
-    Vector normalize();
+    void normalize();
     Vector scalarProduct(double s);
     double dotProduct(Vector vec);
 };
