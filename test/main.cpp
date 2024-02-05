@@ -10,13 +10,20 @@ using namespace sf;
 int main()
 {
     RenderWindow window(VideoMode(640, 480), "SFML works!");
+    window.setFramerateLimit(60);
 
     CircleShape hoop;
+    int dir = 0;
     hoop.setRadius(50.f);
     hoop.setFillColor(Color::Blue);
     hoop.setOutlineThickness(2);
     hoop.setOutlineColor(Color::Yellow);
 
+    
+    Transformable transformable = Transformable();
+    transformable.getPosition().x;
+    Vector2f vector = Vector2f();
+    vector.
 
     CircleShape ball;
 
@@ -31,6 +38,14 @@ int main()
 
 
         //Update
+        if (hoop.getPosition().x <= 0) {
+            dir = 1;
+        }
+        else if (hoop.getPosition().x + hoop.getRadius() * 2 >= window.getSize().x)
+            dir = 0;
+        if (dir == 0) {
+            hoop.move(-5.f, 0);
+        }
         window.clear(Color::White);
         
 
