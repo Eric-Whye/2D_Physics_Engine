@@ -24,10 +24,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Window.cpp">
+    <ClCompile Include="ScreenWindow.cpp">
       <Filter>Source Files\Screen Output</Filter>
     </ClCompile>
     <ClCompile Include="UI.cpp">
@@ -38,16 +35,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Entity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Window.h">
+    <ClInclude Include="ScreenWindow.h">
       <Filter>Header Files\Screen Output</Filter>
     </ClInclude>
     <ClInclude Include="UI.h">
       <Filter>Header Files\Screen Output</Filter>
     </ClInclude>
     <ClInclude Include="Vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,12 +1,12 @@
-#include <cmath>
 #include <SFML/System.hpp>
-class Vector : sf::Vector2f{
+
+class Vector : public sf::Vector2f{
 public:
     float length();
     float sqrLength();
-    Vector normalized();
+    sf::Vector2f normalized();
     void normalize();
-    Vector scalarProduct(float s);
-    float dotProduct(Vector vec);
+    sf::Vector2f scalarProduct(float s);
+    float dotProduct(sf::Vector2f vec);
 };
 

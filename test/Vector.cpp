@@ -1,31 +1,32 @@
 #include "Vector.h"
+#include <SFML/System.hpp>
 #include <cmath>
 
 using namespace std;
 
-double Vector::length() {
+float Vector::length() {
     return sqrt((x * x) + (y * y));
 }
 
-double Vector::sqrLength() {
+float Vector::sqrLength() {
     return (x * x) + (y * y);
 }
 
-Vector Vector::normalized() {
-    double normLength = 1 / length();
-    return Vector(x * normLength, y * normLength);
+sf::Vector2f Vector::normalized() {
+    float normLength = 1 / length();
+    return sf::Vector2f(x * normLength, y * normLength);
 }
 
 void Vector::normalize() {
-    double normLength = 1 / length();
+    float normLength = 1 / length();
     x *= normLength;
     y *= normLength;
 }
 
-Vector Vector::scalarProduct(double s) {
-    return Vector(x * s, y * s);
+sf::Vector2f Vector::scalarProduct(float s) {
+    return sf::Vector2f(x * s, y * s);
 }
 
-double Vector::dotProduct(Vector vec) {
+float Vector::dotProduct(sf::Vector2f vec) {
     return ((x * vec.x) + (y * vec.y));
 }

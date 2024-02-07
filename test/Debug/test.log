@@ -1,3 +1,31 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (test.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Entity.cpp
+C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Vector.h(3,14): error C2011: 'Vector': 'class' type redefinition
+  (compiling source file 'Entity.cpp')
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Vector.h(3,7):
+  see declaration of 'Vector'
+  
+C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Entity.cpp(6,2): error C2065: 'position': undeclared identifier
+C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Entity.cpp(6,19): error C2027: use of undefined type 'Vector'
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Vector.h(3,7):
+  see declaration of 'Vector'
+  
+C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Entity.cpp(8,9): error C2027: use of undefined type 'Vector'
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Vector.h(3,7):
+  see declaration of 'Vector'
+  
+C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Entity.cpp(9,8): error C2039: 'position': is not a member of 'Entity'
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Entity.h(4,7):
+  see declaration of 'Entity'
+  
+C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Entity.cpp(12,2): error C2065: 'position': undeclared identifier
+C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Entity.cpp(13,2): error C2065: 'position': undeclared identifier
   main.cpp
-  test.vcxproj -> C:\Users\Eric\Desktop\project\2D_Physics_Engine\Debug\2D_Physics_Engine.exe
+  Window.cpp
+C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Window.cpp(3,1): error C2872: 'Window': ambiguous symbol
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Window.h(9,7):
+  could be 'Window'
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\include\SFML\Graphics\Texture.hpp(42,7):
+  or       'sf::Window'
+  
+  Generating Code...

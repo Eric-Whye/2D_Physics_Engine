@@ -23,7 +23,7 @@ int main()
     Transformable transformable = Transformable();
     transformable.getPosition().x;
     Vector2f vector = Vector2f();
-    vector.
+  
 
     CircleShape ball;
 
