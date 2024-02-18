@@ -1,31 +1,79 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (test.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Entity.cpp
-C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Vector.h(3,14): error C2011: 'Vector': 'class' type redefinition
-  (compiling source file 'Entity.cpp')
-  C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Vector.h(3,7):
-  see declaration of 'Vector'
-  
-C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Entity.cpp(6,2): error C2065: 'position': undeclared identifier
-C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Entity.cpp(6,19): error C2027: use of undefined type 'Vector'
-  C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Vector.h(3,7):
-  see declaration of 'Vector'
-  
-C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Entity.cpp(8,9): error C2027: use of undefined type 'Vector'
-  C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Vector.h(3,7):
-  see declaration of 'Vector'
-  
-C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Entity.cpp(9,8): error C2039: 'position': is not a member of 'Entity'
-  C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Entity.h(4,7):
-  see declaration of 'Entity'
-  
-C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Entity.cpp(12,2): error C2065: 'position': undeclared identifier
-C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Entity.cpp(13,2): error C2065: 'position': undeclared identifier
   main.cpp
-  Window.cpp
-C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Window.cpp(3,1): error C2872: 'Window': ambiguous symbol
-  C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\Window.h(9,7):
-  could be 'Window'
-  C:\Users\Eric\Desktop\project\2D_Physics_Engine\include\SFML\Graphics\Texture.hpp(42,7):
-  or       'sf::Window'
+C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\main.cpp(14,25): error C2280: 'ScreenWindow::ScreenWindow(const ScreenWindow &)': attempting to reference a deleted function
+  ScreenWindow.cpp
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\ScreenWindow.h(19,1):
+  compiler has generated 'ScreenWindow::ScreenWindow' here
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\ScreenWindow.h(19,1):
+  'ScreenWindow::ScreenWindow(const ScreenWindow &)': function was implicitly deleted because a data member invokes a deleted or inaccessible function 'sf::RenderWindow::RenderWindow(const sf::RenderWindow &)'
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\include\SFML\Graphics\RenderWindow.hpp(198,1):
+  'sf::RenderWindow::RenderWindow(const sf::RenderWindow &)': function was implicitly deleted because a base class invokes a deleted or inaccessible function 'sf::Window::Window(const sf::Window &)'
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\include\SFML\Window\Window.hpp(282,1):
+  'sf::Window::Window(const sf::Window &)': function was implicitly deleted because a base class invokes a deleted or inaccessible function 'sf::WindowBase::WindowBase(const sf::WindowBase &)'
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\include\SFML\Window\WindowBase.hpp(475,1):
+  'sf::WindowBase::WindowBase(const sf::WindowBase &)': function was implicitly deleted because a base class invokes a deleted or inaccessible function 'sf::NonCopyable::NonCopyable(const sf::NonCopyable &)'
+  
+C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\ScreenWindow.cpp(26,20): warning C4018: '<': signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,76): error C2259: 'sf::Shape': cannot instantiate abstract class
+  (compiling source file 'ScreenWindow.cpp')
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\include\SFML\Graphics\Shape.hpp(44,25):
+  see declaration of 'sf::Shape'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,76):
+  due to following members:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,76):
+  'size_t sf::Shape::getPointCount(void) const': is abstract
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\include\SFML\Graphics\Shape.hpp(196,25):
+  see declaration of 'sf::Shape::getPointCount'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,76):
+  'sf::Vector2f sf::Shape::getPoint(size_t) const': is abstract
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\include\SFML\Graphics\Shape.hpp(213,22):
+  see declaration of 'sf::Shape::getPoint'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,76):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\ScreenWindow.h(9,25):
+  	see reference to class template instantiation 'std::vector<sf::Shape,std::allocator<sf::Shape>>' being compiled
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(870,23):
+  	while compiling class template member function 'void std::vector<sf::Shape,std::allocator<sf::Shape>>::push_back(const _Ty &)'
+          with
+          [
+              _Ty=sf::Shape
+          ]
+  		C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\ScreenWindow.h(15,64):
+  		see the first reference to 'std::vector<sf::Shape,std::allocator<sf::Shape>>::push_back' in 'ScreenWindow::addRectangle'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(871,9):
+  	see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_one_at_back<const _Ty&>(const _Ty &)' being compiled
+          with
+          [
+              _Ty=sf::Shape
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(780,20):
+  	see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_back_with_unused_capacity<const _Ty&>(const _Ty &)' being compiled
+          with
+          [
+              _Ty=sf::Shape
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(798,27):
+  	see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,const _Ty&>(_Alloc &,_Objty *const ,const _Ty &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<sf::Shape>,
+              _Ty=sf::Shape,
+              _Objty=sf::Shape
+          ]
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,82): error C2259: 'sf::Shape': cannot instantiate abstract class
+  (compiling source file 'ScreenWindow.cpp')
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\include\SFML\Graphics\Shape.hpp(44,25):
+  see declaration of 'sf::Shape'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,82):
+  due to following members:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,82):
+  'size_t sf::Shape::getPointCount(void) const': is abstract
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\include\SFML\Graphics\Shape.hpp(196,25):
+  see declaration of 'sf::Shape::getPointCount'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,82):
+  'sf::Vector2f sf::Shape::getPoint(size_t) const': is abstract
+  C:\Users\Eric\Desktop\project\2D_Physics_Engine\include\SFML\Graphics\Shape.hpp(213,22):
+  see declaration of 'sf::Shape::getPoint'
   
   Generating Code...

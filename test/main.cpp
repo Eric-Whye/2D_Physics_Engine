@@ -5,57 +5,27 @@
 #include "SFML\System.hpp"
 #include <iostream>
 
+#include "ScreenWindow.h"
+
 using namespace sf;
 
 int main()
 {
-    RenderWindow window(VideoMode(640, 480), "SFML works!");
-    window.setFramerateLimit(60);
-
+    ScreenWindow window = ScreenWindow::ScreenWindow();
     CircleShape hoop;
-    int dir = 0;
     hoop.setRadius(50.f);
     hoop.setFillColor(Color::Blue);
     hoop.setOutlineThickness(2);
     hoop.setOutlineColor(Color::Yellow);
+
+    window.addCircle(hoop);
+    window.UpdateWindow();
 
     
     Transformable transformable = Transformable();
     transformable.getPosition().x;
     Vector2f vector = Vector2f();
   
-
-    CircleShape ball;
-
-    while (window.isOpen())
-    {
-        Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-
-        //Update
-        if (hoop.getPosition().x <= 0) {
-            dir = 1;
-        }
-        else if (hoop.getPosition().x + hoop.getRadius() * 2 >= window.getSize().x)
-            dir = 0;
-        if (dir == 0) {
-            hoop.move(-5.f, 0);
-        }
-        window.clear(Color::White);
-        
-
-
-
-        //Draw
-        window.draw(hoop);
-        window.display();
-    }
-
     return 0;
 }
 

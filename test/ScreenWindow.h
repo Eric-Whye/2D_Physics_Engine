@@ -11,5 +11,10 @@ public:
 	ScreenWindow();
 	void UpdateWindow();
 	void Draw();
+
+	void addRectangle(sf::RectangleShape shape) { shapes.push_back(shape); }
+	void addCircle(sf::CircleShape shape) { shapes.push_back(shape); }
+	void addConvex(sf::ConvexShape shape) {shapes.push_back(shape);}
+	void clearShapes() { shapes.clear(); }
 };
 

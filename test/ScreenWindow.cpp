@@ -13,12 +13,20 @@ void ScreenWindow::UpdateWindow() {
 	while (window.pollEvent(event)){
 		if (event.type == sf::Event::Closed)
 			window.close();
+
+
+		Draw();
+
+
+		window.clear(Color::White);
 	}
 }
 
 void ScreenWindow::Draw() {
-	for(auto shape : shapes){
-		window.draw(shape);
+	for (int i = 0; i < shapes.size(); i++) {
+		window.draw(shapes.at(i));
 	}
 	window.display();
 }
+
+
