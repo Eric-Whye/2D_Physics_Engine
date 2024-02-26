@@ -4,6 +4,17 @@
 
 using namespace std;
 
+Vector::Vector() {
+    x = 0, y = 0;
+}
+Vector::Vector(float x, float y) {
+    this->x = x;
+    this->y = y;
+}
+
+float Vector::getX() { return x; }
+float Vector::getY() { return y; }
+
 float Vector::length() {
     return sqrt((x * x) + (y * y));
 }
@@ -12,9 +23,9 @@ float Vector::sqrLength() {
     return (x * x) + (y * y);
 }
 
-sf::Vector2f Vector::normalized() {
+Vector Vector::normalized() {
     float normLength = 1 / length();
-    return sf::Vector2f(x * normLength, y * normLength);
+    return Vector(x * normLength, y * normLength);
 }
 
 void Vector::normalize() {
@@ -23,10 +34,10 @@ void Vector::normalize() {
     y *= normLength;
 }
 
-sf::Vector2f Vector::scalarProduct(float s) {
-    return sf::Vector2f(x * s, y * s);
+Vector Vector::scalarProduct(float s) {
+    return Vector(x * s, y * s);
 }
 
-float Vector::dotProduct(sf::Vector2f vec) {
+float Vector::dotProduct(Vector vec) {
     return ((x * vec.x) + (y * vec.y));
 }

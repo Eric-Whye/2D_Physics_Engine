@@ -11,7 +11,8 @@ using namespace sf;
 
 int main()
 {
-    ScreenWindow window = ScreenWindow::ScreenWindow();
+    
+    /*ScreenWindow window;
     CircleShape hoop;
     hoop.setRadius(50.f);
     hoop.setFillColor(Color::Blue);
@@ -21,10 +22,7 @@ int main()
     window.addCircle(hoop);
     window.UpdateWindow();
 
-    
-    Transformable transformable = Transformable();
-    transformable.getPosition().x;
-    Vector2f vector = Vector2f();
+   */
   
     return 0;
 }

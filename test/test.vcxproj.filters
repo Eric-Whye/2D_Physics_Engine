@@ -19,6 +19,12 @@
     <Filter Include="Header Files\Screen Output">
       <UniqueIdentifier>{536e13ce-943a-497b-b4e0-733f37a03258}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Logic">
+      <UniqueIdentifier>{e3d0c8f1-10c4-41b3-b426-e45ffb2c217e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Logic">
+      <UniqueIdentifier>{da809b75-2586-434e-9739-680cc22d4872}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -30,8 +36,14 @@
     <ClCompile Include="UI.cpp">
       <Filter>Source Files\Screen Output</Filter>
     </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="Field.cpp">
+      <Filter>Source Files\Logic</Filter>
+    </ClCompile>
     <ClCompile Include="Vector.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Logic</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -41,11 +53,17 @@
     <ClInclude Include="UI.h">
       <Filter>Header Files\Screen Output</Filter>
     </ClInclude>
-    <ClInclude Include="Vector.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Constants.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Field.h">
+      <Filter>Header Files\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Header Files\Logic</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

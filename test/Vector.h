@@ -1,12 +1,19 @@
-#include <SFML/System.hpp>
+namespace {
+    class Vector {
+        float x, y;
 
-class Vector : public sf::Vector2f{
-public:
-    float length();
-    float sqrLength();
-    sf::Vector2f normalized();
-    void normalize();
-    sf::Vector2f scalarProduct(float s);
-    float dotProduct(sf::Vector2f vec);
-};
+    protected:
+        Vector();
+        Vector(float x, float y);
+    public:
+        float getX();
+        float getY();
+        float length();
+        float sqrLength();
+        Vector normalized();
+        void normalize();
+        Vector scalarProduct(float s);
+        float dotProduct(Vector vec);
+    };
+}
 

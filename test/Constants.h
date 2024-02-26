@@ -1,8 +1,9 @@
-#pragma once
+namespace constants{
+	enum ShapeType;
 
-const std::string WINDOW_TITLE = "2D Physics Engine";
-const int SIZE_X = 640;
-const int SIZE_Y = 480;
+	extern const char WINDOW_TITLE[];
+	extern const int SIZE_X;
+	extern const int SIZE_Y;
 
-
-const int FRAMERATE_LIMIT = 60;
+	extern const int FRAMERATE_LIMIT;
+}
