@@ -41,13 +41,13 @@ void ScreenWindow::Draw() {
 
 void ScreenWindow::updateShapesPositions(std::vector<Vector> positions) {
 	for (int i = 0; i < positions.size(); i++) {
-		//shapes.at(i).setPosition(positions.at(i).getX(), positions.at(i).getY());
+		shapes.at(i).setPosition(positions.at(i).getX(), positions.at(i).getY());
 	}
 }
 
-void ScreenWindow::addRectangle(RectangleShape shape) { shapes.push_back(shape); }
-void ScreenWindow::addCircle(CircleShape shape) { shapes.push_back(shape); }
-void ScreenWindow::addConvex(ConvexShape shape) { shapes.push_back(shape); }
+void ScreenWindow::addRectangle(RectangleShape shape) { rectangleShapes.push_back(shape); }
+void ScreenWindow::addCircle(CircleShape shape) { circleShapes.push_back(shape); }
+void ScreenWindow::addConvex(ConvexShape shape) { convexShapes.push_back(shape); }
 void ScreenWindow::clearShapes() {
 	rectangleShapes.clear();
 	circleShapes.clear();

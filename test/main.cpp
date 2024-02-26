@@ -12,7 +12,7 @@ using namespace sf;
 int main()
 {
     
-    /*ScreenWindow window;
+    ScreenWindow window;
     CircleShape hoop;
     hoop.setRadius(50.f);
     hoop.setFillColor(Color::Blue);
@@ -22,7 +22,7 @@ int main()
     window.addCircle(hoop);
     window.UpdateWindow();
 
-   */
+   
   
     return 0;
 }

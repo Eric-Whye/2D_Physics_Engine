@@ -1,9 +1,18 @@
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
+
 namespace constants{
-	enum ShapeType;
+	enum ShapeType {
+		Rectangle,
+		Circle,
+		Convex
+	};
 
-	extern const char WINDOW_TITLE[];
-	extern const int SIZE_X;
-	extern const int SIZE_Y;
+	static const char WINDOW_TITLE[] = "2D Physics Engine";
+	static const int SIZE_X = 640;
+	static const int SIZE_Y = 480;
 
-	extern const int FRAMERATE_LIMIT;
+	static const int FRAMERATE_LIMIT = 60;
 }
+
+#endif
