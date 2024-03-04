@@ -1,0 +1,17 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (2D_Physics_Engine.vcxproj, test.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Body.cpp
+  World.cpp
+  main.cpp
+C:\Users\Eric\Desktop\2D_Physics_Engine\src\main.cpp(28,22): warning C4244: 'initializing': conversion from 'DWORD' to 'float', possible loss of data
+C:\Users\Eric\Desktop\2D_Physics_Engine\src\main.cpp(31,35): warning C4244: 'initializing': conversion from 'DWORD' to 'float', possible loss of data
+C:\Users\Eric\Desktop\2D_Physics_Engine\src\main.cpp(31,33): warning C4244: 'initializing': conversion from 'DWORD' to 'const float', possible loss of data
+  Shape.cpp
+  Transform.cpp
+  UI.cpp
+  Vector.cpp
+  ScreenWindow.cpp
+  Generating Code...
+C:\Users\Eric\Desktop\2D_Physics_Engine\src\Shape.cpp(60): warning C4172: returning address of local variable or temporary: rect
+C:\Users\Eric\Desktop\2D_Physics_Engine\src\Shape.cpp(79): warning C4172: returning address of local variable or temporary: circle
+  LINK : C:\Users\Eric\Desktop\2D_Physics_Engine\Debug\2D_Physics_Engine.exe not found or not built by the last incremental link; performing full link
+  src.vcxproj -> C:\Users\Eric\Desktop\2D_Physics_Engine\Debug\2D_Physics_Engine.exe

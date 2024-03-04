@@ -1,4 +1,2 @@
-﻿  2DPhysicsEngine.nUnitTest.cpp
-C:\Users\Eric\Desktop\project\2D_Physics_Engine\test\ScreenWindow.h(2,10): error C1083: Cannot open include file: 'SFML\Graphics.hpp': No such file or directory
-  (compiling source file '/2DPhysicsEngine.nUnitTest.cpp')
-  
+﻿     Creating library C:\Users\Eric\Desktop\2D_Physics_Engine\Debug\2DPhysicsEngine.nUnitTest.lib and object C:\Users\Eric\Desktop\2D_Physics_Engine\Debug\2DPhysicsEngine.nUnitTest.exp
+  2DPhysicsEngine.nUnitTest.vcxproj -> C:\Users\Eric\Desktop\2D_Physics_Engine\Debug\2DPhysicsEngine.nUnitTest.dll

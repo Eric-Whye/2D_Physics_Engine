@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\Eric\Desktop\project\2D_Physics_Engine\Release\2D_Physics_Engine.exe</FullPath>
+      <FullPath>C:\Users\Eric\Desktop\2D_Physics_Engine\Release\2D_Physics_Engine.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\Eric\Desktop\project\2D_Physics_Engine\Release\2DPhysicsEngine.nUnitTest.dll</FullPath>
+      <FullPath>C:\Users\Eric\Desktop\2D_Physics_Engine\Release\2DPhysicsEngine.nUnitTest.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
