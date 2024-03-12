@@ -1,6 +1,5 @@
 #pragma once
 #include "Vector.h"
-#include "SFML\Graphics.hpp"
 #include <iostream>
 
 //Replciates a Axis-aligned Bounding Box
@@ -26,15 +25,19 @@ public:
 
 
 namespace sh {
+	enum ShapeType {
+		Rectangle,
+		Circle,
+		Convex
+	};
 
 	class Shape {
 	protected:
-		AABBox boundingBox;
 		//vec::Vector origin;
 		//vec::Vector centre;
 		//float rotation;
 	public:
-		
+		AABBox boundingBox;
 		vec::Vector getPosition();
 		void setPosition(vec::Vector position);
 
@@ -50,9 +53,7 @@ namespace sh {
 		AABBox getBounds();
 
 
-
-		//SFML workaround
-		virtual sf::Shape* getSFMLShape() = 0;
+		virtual ShapeType getShapeType() = 0;
 	};
 
 
@@ -66,7 +67,7 @@ namespace sh {
 
 		void rotate(float angle);
 
-		sf::Shape* getSFMLShape();
+		ShapeType getShapeType();
 	};
 
 
@@ -79,6 +80,6 @@ namespace sh {
 
 		void rotate(float angle);
 
-		sf::Shape* getSFMLShape();
+		ShapeType getShapeType();
 	};
 }

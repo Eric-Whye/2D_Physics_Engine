@@ -1,15 +1,8 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (2D_Physics_Engine.vcxproj, test.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Body.cpp
-  Shapes.cpp
-  World.cpp
-  main.cpp
-C:\Users\Eric\Desktop\2D_Physics_Engine\src\main.cpp(30,22): warning C4244: 'initializing': conversion from 'DWORD' to 'float', possible loss of data
-C:\Users\Eric\Desktop\2D_Physics_Engine\src\main.cpp(33,35): warning C4244: 'initializing': conversion from 'DWORD' to 'float', possible loss of data
-C:\Users\Eric\Desktop\2D_Physics_Engine\src\main.cpp(33,33): warning C4244: 'initializing': conversion from 'DWORD' to 'const float', possible loss of data
-C:\Users\Eric\Desktop\2D_Physics_Engine\src\main.cpp(20,10): warning C4930: 'Body body(void)': prototyped function not called (was a variable definition intended?)
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (2D_Physics_Engine.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  ScreenWindow.cpp
   Generating code
-  Previous IPDB and IOBJ mismatch, fall back to full compilation.
-C:\Users\Eric\Desktop\2D_Physics_Engine\src\Shapes.cpp(64): warning C4172: returning address of local variable or temporary: rect
-  All 154 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  13 of 152 functions ( 8.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    3 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   src.vcxproj -> C:\Users\Eric\Desktop\2D_Physics_Engine\Release\2D_Physics_Engine.exe

@@ -1,5 +1,6 @@
 #pragma once
 #include "ScreenWindow.h"
+#include "SFML\Graphics.hpp"
 #include "Body.h"
 
 struct Pair {

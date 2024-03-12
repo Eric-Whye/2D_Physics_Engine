@@ -36,16 +36,12 @@ namespace sh {
 	}
 	//vec::Vector Shape::getCentre() { return centre; }
 
-	AABBox Shape::getBounds(){
-		return boundingBox;
-	}
+	AABBox Shape::getBounds() { return boundingBox; }
 
 
 
 	//Rectangle
-	RectangleShape::RectangleShape() {
-		boundingBox = AABBox();
-	}
+	RectangleShape::RectangleShape() { boundingBox = AABBox(); }
 
 	RectangleShape::RectangleShape(vec::Vector position, vec::Vector size) {
 		boundingBox = AABBox(position, size);
@@ -55,19 +51,12 @@ namespace sh {
 		//TODO
 	}
 
-	sf::Shape* RectangleShape::getSFMLShape() {
-		sf::RectangleShape rect = sf::RectangleShape(sf::Vector2f(getPosition().getX(), getPosition().getY()));
-		rect.setSize(sf::Vector2f(boundingBox.getSize().getX(), boundingBox.getSize().getY()));
-		rect.setFillColor(sf::Color::Blue);
-		rect.setOutlineColor(sf::Color::Yellow);
-		rect.setOutlineThickness(2);
-		return &rect;
-	}
+	ShapeType RectangleShape::getShapeType() { return Rectangle; }
+
+
 
 	//Circle
-	CircleShape::CircleShape() {
-		boundingBox = AABBox();
-	}
+	CircleShape::CircleShape() { boundingBox = AABBox(); }
 
 	CircleShape::CircleShape(vec::Vector position, float radius) {
 		boundingBox = AABBox(position, vec::Vector(radius * 2, radius * 2));
@@ -78,8 +67,6 @@ namespace sh {
 		//TODO
 	}
 
-	sf::Shape* CircleShape::getSFMLShape() {
-		sf::CircleShape circle;
-		return &circle;
-	}
+	ShapeType CircleShape::getShapeType() { return Circle; }
+
 }

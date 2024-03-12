@@ -12,7 +12,6 @@ ScreenWindow::ScreenWindow() {
 }
 
 void ScreenWindow::RenderWindow() {
-	std::cout << shapes.size();
 	Event event;
 	while (window.pollEvent(event)) {
 		if (event.type == Event::Closed)
@@ -29,7 +28,8 @@ void ScreenWindow::RenderWindow() {
 
 void ScreenWindow::Draw() {
 	for (size_t i = 0; i < shapes.size(); i++) {
-		window.draw(*shapes.at(i));
+		try {window.draw(*shapes.at(i));}
+		catch (std::exception& e) { std::cout << "exception: " << e.what() << std::endl; }
 	}
 }
 
@@ -48,9 +48,7 @@ void ScreenWindow::updateShapesPositions(std::vector<vec::Vector> positions) {
 }
 
 void ScreenWindow::addShape(sf::Shape* shape){
-	std::cout << "hey";
 	shapes.push_back(shape);
-	std::cout << "hi";
 }
 
 void ScreenWindow::addRectangle(vec::Vector pos, float length, float width, sf::Color fillColour, sf::Color outlineColour, float outlineThickness){
@@ -86,3 +84,4 @@ void ScreenWindow::clearShapes() { shapes.clear(); }
 
 
 bool ScreenWindow::isOpen() {return window.isOpen();}
+
